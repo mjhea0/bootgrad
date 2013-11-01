@@ -1,0 +1,120 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='page-header text-center'>
+      <h1>BootGrad</h1>
+      <p class="lead">BootGrad is an open platform for collecting and analyzing data about tech bootcamps.<br> Our goal is to answer the question, <em>"What the hell happens after I graduate?"</em></p>
+      <h3>Learn. Compare. Share.</h3>
+    </div>
+  </div>
+</div>
+
+<div class='row text-center'>
+  <div class='col-lg-12'>
+    <p class="lead">Did you attend a tech bookcamp ...<p>
+      <ul class='list-group'>
+        <li class='list-group-item inline-block with-side-margins with-bottom-margin'>
+          <img src="img/hackreactor-new-160x160.png" class='img-responsive'>
+        </li>
+        <li class='list-group-item inline-block with-side-margins with-bottom-margin'>
+          <img src="img/hackerschool-140x140.png" class='img-responsive'>
+        </li>
+        <li class='list-group-item inline-block with-side-margins with-bottom-margin'>
+          <img src="img/ga-new-200x200.png" class='img-responsive'>
+        </li>
+        <li class='list-group-item inline-block with-side-margins with-bottom-margin' style="margin-bottom:15px;">
+          <img src="img/devbootcamp_com-100x100.jpg" class='img-responsive'>
+        </li>
+      </ul>
+      <div class="row text-center">
+        <ul class='list-group'>
+        <li class='list-group-item inline-block with-side-margins with-bottom-margin'>
+          <img src="img/thinkful-200x200.png" class='img-responsive'>
+        </li>
+        <li class='list-group-item inline-block with-side-margins with-bottom-margin'>
+          <img src="img/treehouse-195x195.png" class='img-responsive'>
+        </li>
+        <li class='list-group-item inline-block with-side-margins with-bottom-margin'>
+          <img src="img/starterleague-200x200.jpg" class='img-responsive'>
+        </li>
+        <li class='list-group-item inline-block with-side-margins with-bottom-margin' style="margin-bottom:15px;">
+          <img src="img/refactoru-150x150.png" class='img-responsive'>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class='row text-center'>
+  <div class='col-lg-12'>
+    <p class="lead">... then ...</p>
+    <button type="button" class="btn btn-primary btn-lg" ng-click="takeSurvey()">Take the Survey</button>
+  </div>
+</div>
+
+<div class='row'>
+  <br>
+  <div class='col-lg-8 col-lg-offset-2'>
+    <h3>What's this all about?</h3>
+    <h4>According to the <a href="http://blogs.wsj.com/digits/2013/10/30/upstart-offers-a-new-way-to-finance-code-school">WSJ</a>, "Typically running about 12 weeks and costing about $12,000, [tech bootcamp]s claim job placement rates over 90% and average earnings for graduates in the $80,000 range."</h4>
+    <h3>Why should you care?</h3>
+    <h3>What's the end goal?</h4>
+    
+
+
+
+The question "What are the best" is a a difficult one. It depends on your metric of the best. Some things you should be assessing best on:
+How well does the program meet your expectations? Can they back it up?
+Does it look / sound fun?
+Are they reputable? Are the engineers that are teaching the class reputable or solid developers?
+
+  <div>
+</div>
+
+      <div class="alert alert-success">
+        <strong>Well done!</strong> You successfully read this important alert message.
+      </div>
+
+<!-- survey detail modal -->
+<div class="modal fade" id="survey" tabindex="-1" role="dialog" aria-labelledby="survey" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Test</h4>
+            </div>
+            <div class="modal-body">
+                <!-- open question -->
+                <div>
+                    <h3>What is your name?</h3>
+                    <input type="text" ng-model="newName" placeholder="Enter a name here">
+                </div>
+                <!-- radio choice question -->
+                <div>
+                    <h3>What is your age?</h3>
+                    <div class="radio">
+                        <input type="radio" ng-model="newAge" value="16-25">16-25<br/>
+                        <input type="radio" ng-model="newAge" value="26-35">26-35<br/>
+                        <input type="radio" ng-model="newAge" value="36-45">36-45<br/>
+                        <input type="radio" ng-model="newAge" value="46+">46+<br/>
+                    </div>
+                </div>
+                <!-- toggle choice question -->
+                <div>
+                    <h3>Will you buy me lunch?</h3>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary" ng-model="newDinner" btn-radio="'Yes'">YES</button>
+                        <button type="button" class="btn btn-primary" ng-model="newDinner" btn-radio="'No'">NO</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="addSurvey()">Send results</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</div>
+
