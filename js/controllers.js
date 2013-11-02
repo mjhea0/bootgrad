@@ -6,7 +6,7 @@ angular.module('myApp.controllers', [])
 
     .controller('surveyCtrl', ['$scope', '$rootScope', 'FBURL', 'Firebase', 'angularFireCollection', function($scope, $rootScope, FBURL, Firebase, angularFireCollection) {
         $scope.newAge = '16-25';
-        $scope.newName = '';
+        $scope.newName = 'Mustard';
         $scope.newDinner = 'Yes';
 
         // open modal
@@ -27,7 +27,7 @@ angular.module('myApp.controllers', [])
             if( $scope.newAge && $scope.newName && $scope.newDinner ) {
                 $rootScope.results.add({age: $scope.newAge, name: $scope.newName, dinner: $scope.newDinner});
                 $scope.newAge = '16-25';
-                $scope.newName = '';
+                $scope.newName = 'Mustard';
                 $scope.newDinner = 'Yes';
                 $('#survey').modal('hide');
             } else {
