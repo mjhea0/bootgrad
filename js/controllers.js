@@ -8,6 +8,7 @@ angular.module('myApp.controllers', [])
         $scope.newAge = '16-25';
         $scope.newName = 'Mustard';
         $scope.newDinner = 'Yes';
+        $scope.newCamp = 'Yes';
 
         // open modal
         $scope.takeSurvey = function () {
@@ -17,18 +18,20 @@ angular.module('myApp.controllers', [])
         // constrain number of messages by passing a ref to angularFire
         var age = new Firebase(FBURL+'/survey').limit(10),
             name = new Firebase(FBURL+'/survey').limit(30),
-            dinner = new Firebase(FBURL+'/survey').limit(5);
+            dinner = new Firebase(FBURL+'/survey').limit(5),
+            camp = new Firebase(FBURL+'/survey').limit(5);
 
         // add the array into $scope
-        $rootScope.results = angularFireCollection(age, name, dinner);
+        $rootScope.results = angularFireCollection(age, name, dinner, camp);
 
         // add new results to the list
         $scope.addSurvey = function() {
-            if( $scope.newAge && $scope.newName && $scope.newDinner ) {
-                $rootScope.results.add({age: $scope.newAge, name: $scope.newName, dinner: $scope.newDinner});
+            if( $scope.newAge && $scope.newName && $scope.newDinner && $scope.newCamp ) {
+                $rootScope.results.add({age: $scope.newAge, name: $scope.newName, dinner: $scope.newDinner, camp: $scope.newCamp});
                 $scope.newAge = '16-25';
                 $scope.newName = 'Mustard';
                 $scope.newDinner = 'Yes';
+                $scope.Camp = 'Yes';
                 $('#survey').modal('hide');
             } else {
                 alert('You missed something.');
