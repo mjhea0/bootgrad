@@ -14,13 +14,13 @@ angular.module('myApp',
         });
 
         $routeProvider.when('/login', {
-            templateUrl: 'partials/login.html',
+            templateUrl: '/',
             controller: 'loginCtrl'
         });
 
         $routeProvider.when('/result', {
             authRequired: true,
-            templateUrl: 'partials/result.html',
+            templateUrl: '/',
             controller: 'resultCtrl'
         });
 
